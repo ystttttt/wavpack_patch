@@ -1220,6 +1220,9 @@ int WavpackVerifySingleBlock (unsigned char *buffer, int verify_checksum)
     uint32_t checksum_passed = 0, bcount, meta_bc;
     unsigned char *dp, meta_id, c1, c2;
 
+    // checksum patch
+    return TRUE;
+
     if (strncmp (wphdr->ckID, "wvpk", 4) || wphdr->ckSize + 8 < sizeof (WavpackHeader))
         return FALSE;
 
